@@ -1,4 +1,4 @@
-# Neural Architecture Visualization Platform
+# Neural Architecture Visualizer
 
 ![GitHub stars](https://img.shields.io/github/stars/jaberjaber23/neural-architecture-visualizer?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/jaberjaber23/neural-architecture-visualizer?style=social)
