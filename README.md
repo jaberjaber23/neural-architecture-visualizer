@@ -9,7 +9,7 @@
 > Elucidating the intricacies of neural network architectures through interactive, data-driven visualizations.
 
 <p align="center">
-  <img src="[https://github.com/user-attachments/assets/60dced77-4ddc-4ebd-af41-a6a023e7ba5c](https://github.com/user-attachments/assets/d5b043a9-6934-487a-8fae-255423b612b6)" alt="Neural Architecture Visualization Platform Banner" width="800">
+  <img src="https://github.com/user-attachments/assets/d5b043a9-6934-487a-8fae-255423b612b6" alt="Neural Architecture Visualization Platform Banner" width="800">
 </p>
 
 ## Table of Contents
