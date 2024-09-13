@@ -1,9 +1,9 @@
-# Neural Architecture Visualization Platform
+# Neural Architecture Visualizer
 
-![GitHub stars](https://img.shields.io/github/stars/jaberjaber/neural-architecture-visualizer?style=social)
-![GitHub forks](https://img.shields.io/github/forks/jaberjaber/neural-architecture-visualizer?style=social)
-![GitHub last commit](https://img.shields.io/github/last-commit/jaberjaber/neural-architecture-visualizer)
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Fjaber.blog%2Fneural-visualizer)](https://jaber.blog/neural-visualizer)
+![GitHub stars](https://img.shields.io/github/stars/jaberjaber23/neural-architecture-visualizer?style=social)
+![GitHub forks](https://img.shields.io/github/forks/jaberjaber23/neural-architecture-visualizer?style=social)
+![GitHub last commit](https://img.shields.io/github/last-commit/jaberjaber23/neural-architecture-visualizer)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fjaber.blog%2Fneural-visualizer)](https://jaber.blog/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 > Elucidating the intricacies of neural network architectures through interactive, data-driven visualizations.
@@ -29,7 +29,7 @@
 
 The Neural Architecture Visualization Platform is an open-source initiative aimed at demystifying complex neural network architectures through interactive, web-based visualizations. By leveraging cutting-edge web technologies and data visualization techniques, we provide researchers, educators, and AI enthusiasts with a powerful tool to explore and understand the inner workings of various neural network components and architectures.
 
-Our platform, accessible at [jaber.blog/neural-visualizer](https://jaber.blog/neural-visualizer), offers a unique blend of scientific rigor and intuitive design, making it an invaluable resource for both academic research and practical learning in the field of artificial intelligence and machine learning.
+Our platform, accessible at [jaber.blog/neural-visualizer](https://jaber.blog/), offers a unique blend of scientific rigor and intuitive design, making it an invaluable resource for both academic research and practical learning in the field of artificial intelligence and machine learning.
 
 ## Key Features
 
@@ -124,7 +124,7 @@ If you use this platform in your research, please cite it as follows:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details.
 
 ## Contact
 
