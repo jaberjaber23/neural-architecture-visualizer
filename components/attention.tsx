@@ -299,7 +299,9 @@ const SelfAttentionVisualization: React.FC = () => {
           {tokens.map((token, i) => (
             <Button
               key={i}
-              ref={(el: HTMLButtonElement | null) => tokenRefs.current[i] = el}
+              ref={(el: HTMLButtonElement | null) => {
+                tokenRefs.current[i] = el;
+              }}
               onClick={() => setSelectedWord(i)}
               bg={selectedWord === i ? 'black' : 'gray.200'}
               color={selectedWord === i ? 'white' : 'black'}
