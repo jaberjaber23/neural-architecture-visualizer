@@ -128,9 +128,9 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) f
 
 ## Contact
 
-Jaber Jaber - [jaber@jaber.blog](mailto:jaber@jaber.blog)
+Jaber Jaber - [jaber@nujoom.ai](mailto:jaber@nujoom.ai)
 
-Project Link: [https://github.com/jaberjaber/neural-architecture-visualizer](https://github.com/jaberjaber/neural-architecture-visualizer)
+Project Link: [https://github.com/jaberjaber/neural-architecture-visualizer](https://github.com/jaberjaber23/neural-architecture-visualizer)
 
 ---
 
