@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Box, Text, Input, VStack, HStack, Heading, SimpleGrid, Divider, Button, NumberInput, NumberInputField, NumberInputStepper, NumberIncrementStepper, NumberDecrementStepper, Slider, SliderTrack, SliderFilledTrack, SliderThumb } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import 'katex/dist/katex.min.css';
@@ -34,17 +34,17 @@ const SelfAttentionVisualization: React.FC = () => {
 
   const tokenRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
-  const handleInputChange = useCallback((text: string) => {
+  useEffect(() => {
+    handleInputChange(inputText);
+  }, [hyperparams]);
+
+  const handleInputChange = (text: string) => {
     const newTokens = text.split(' ').slice(0, hyperparams.maxSeqLength);
     setTokens(newTokens);
     setInputText(newTokens.join(' '));
     calculateAttention(newTokens);
     setSelectedWord(null);
-  }, [hyperparams.maxSeqLength]);
-
-  useEffect(() => {
-    handleInputChange(inputText);
-  }, [handleInputChange, inputText, hyperparams]);
+  };
 
   const calculateAttention = (tokens: string[]) => {
     if (tokens.length === 0) {
@@ -150,7 +150,7 @@ const SelfAttentionVisualization: React.FC = () => {
     }
     return (
       <VStack spacing={4} align="stretch">
-        <Heading size="md">Calculations for &quot;{tokens[index]}&quot;</Heading>
+        <Heading size="md">Calculations for "{tokens[index]}"</Heading>
         <Text>Query vector (first 4 dimensions):</Text>
         <InlineMath math={`q = [${Q[index].slice(0, 4).join(', ')}, \\ldots]`} />
         <Text>Key vector (first 4 dimensions):</Text>
@@ -183,6 +183,7 @@ const SelfAttentionVisualization: React.FC = () => {
           max={max} 
           step={step}
           width="100px"
+
         >
           <NumberInputField />
           <NumberInputStepper>
@@ -198,10 +199,10 @@ const SelfAttentionVisualization: React.FC = () => {
           step={step}
           flex="1"
         >
-          <SliderTrack>
-            <SliderFilledTrack bg="black" />
-          </SliderTrack>
-          <SliderThumb bg="black" />
+        <SliderTrack>
+        <SliderFilledTrack bg="black" />
+        </SliderTrack>
+        <SliderThumb bg="black" />
         </Slider>
       </HStack>
     </Box>
@@ -296,21 +297,21 @@ const SelfAttentionVisualization: React.FC = () => {
           }
         </svg>
         <HStack spacing={4} justifyContent="center" overflowX="auto" pb={2}>
-          {tokens.map((token, i) => (
-            <Button
-              key={i}
-              ref={(el: HTMLButtonElement | null) => tokenRefs.current[i] = el}
-              onClick={() => setSelectedWord(i)}
-              bg={selectedWord === i ? 'black' : 'gray.200'}
-              color={selectedWord === i ? 'white' : 'black'}
-              _hover={{
-                bg: selectedWord === i ? 'gray.800' : 'gray.300'
-              }}
-            >
-              {token}
-            </Button>
-          ))}
-        </HStack>
+        {tokens.map((token, i) => (
+          <Button
+            key={i}
+            ref={(el: HTMLButtonElement | null) => tokenRefs.current[i] = el}
+            onClick={() => setSelectedWord(i)}
+            bg={selectedWord === i ? 'black' : 'gray.200'}
+            color={selectedWord === i ? 'white' : 'black'}
+            _hover={{
+              bg: selectedWord === i ? 'gray.800' : 'gray.300'
+            }}
+          >
+            {token}
+          </Button>
+        ))}
+      </HStack>
       </Box>
       {selectedWord !== null && renderWordSpecificCalculations(selectedWord)}
       <Divider />
@@ -322,12 +323,14 @@ const SelfAttentionVisualization: React.FC = () => {
       </SimpleGrid>
       <Divider />
       <Heading size="md">Step 1: Calculate QK^T</Heading>
-      <BlockMath math={`QK^T = Q \cdot K^T`} />
+      <BlockMath math={`QK^T = Q \\cdot K^T`} />
       {renderMatrix(QKt, 'QK^T')}
       <Divider />
       <Heading size="md">Step 2: Scale QK^T</Heading>
       <BlockMath math={`\\text{Scaled } QK^T = \\frac{QK^T}{\\sqrt{d_k}}`} />
-      {renderMatrix(scaledQKt, 'Scaled QK^T')}
+  
+
+{renderMatrix(scaledQKt, 'Scaled QK^T')}
       <Divider />
       <Heading size="md">Step 3: Apply Softmax</Heading>
       <BlockMath math={`\\text{Attention Scores} = \\text{softmax}(\\text{Scaled } QK^T)`} />

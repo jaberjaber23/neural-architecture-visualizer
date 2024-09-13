@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { ChakraProvider, Container, Heading, Text, Link, VStack } from '@chakra-ui/react';
+import { ChakraProvider, Container, Heading, Text, Link, VStack, HStack, Button } from '@chakra-ui/react';
+import { FaStar } from 'react-icons/fa';
 import SelfAttentionVisualization from '@/components/attention';
 
 const Home: NextPage = () => {
@@ -8,6 +9,7 @@ const Home: NextPage = () => {
   const description = "Interactive visualization of self-attention in Transformers. Explore and understand how self-attention works in neural nets.";
   const author = "Jaber Jaber";
   const url = "https://jaber.blog/";
+  const githubRepo = "jaberjaber23/neural-architecture-visualizer";
 
   return (
     <ChakraProvider>
@@ -43,12 +45,27 @@ const Home: NextPage = () => {
             {description}
           </Text>
           <SelfAttentionVisualization />
-          <Text textAlign="center">
-            Created with &lt;3 by {author} - {' '}
-            <Link href="https://github.com/yourusername/repo-name" isExternal color="blue.500">
-              View on GitHub
-            </Link>
-          </Text>
+          <VStack textAlign="center" spacing={4}>
+            <Text>
+              Created with &lt;3 by {author}
+            </Text>
+            <HStack justifyContent="center" spacing={4}>
+              <Link href={`https://github.com/${githubRepo}`} isExternal color="blue.500">
+                View on GitHub
+              </Link>
+              <Button
+                as="a"
+                href={`https://github.com/${githubRepo}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                leftIcon={<FaStar />}
+                colorScheme="gray"
+                size="sm"
+              >
+                Star
+              </Button>
+            </HStack>
+          </VStack>
         </VStack>
       </Container>
     </ChakraProvider>
