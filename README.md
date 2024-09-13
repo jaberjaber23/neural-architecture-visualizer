@@ -1,9 +1,9 @@
 # Neural Architecture Visualizer
 
-![GitHub stars](https://img.shields.io/github/stars/jaberjaber23/neural-architecture-visualizer?style=social)
-![GitHub forks](https://img.shields.io/github/forks/jaberjaber23/neural-architecture-visualizer?style=social)
+![GitHub stars](https://img.shields.io/github/stars/jaberjaber23/neural-architecture-visualizer)
+![GitHub forks](https://img.shields.io/github/forks/jaberjaber23/neural-architecture-visualizer)
 ![GitHub last commit](https://img.shields.io/github/last-commit/jaberjaber23/neural-architecture-visualizer)
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Fjaber.blog%2Fneural-visualizer)](https://jaber.blog/)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fjaber.blog)](https://jaber.blog/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 > Elucidating the intricacies of neural network architectures through interactive, data-driven visualizations.
