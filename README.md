@@ -114,11 +114,11 @@ If you use this platform in your research, please cite it as follows:
 ```bibtex
 @misc{jaber2024neuralviz,
   author = {Jaber, Jaber},
-  title = {Neural Architecture Visualization Platform},
+  title = {Neural Architecture Visualizer},
   year = {2024},
   publisher = {GitHub},
   journal = {GitHub repository},
-  howpublished = {\url{https://github.com/jaberjaber/neural-architecture-visualizer}}
+  howpublished = {\url{https://github.com/jaberjaber23/neural-architecture-visualizer}}
 }
 ```
 
