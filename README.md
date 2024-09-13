@@ -6,7 +6,7 @@
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fjaber.blog)](https://jaber.blog/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-> Elucidating the intricacies of neural network architectures through interactive, data-driven visualizations.
+> Visualizing neural network architectures interactively.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/d5b043a9-6934-487a-8fae-255423b612b6" alt="Neural Architecture Visualization Platform Banner" width="800">
